@@ -33,11 +33,10 @@ df = pd.DataFrame(rows, columns=columns)
 st.dataframe(
     df,
     column_config={
-        "title": st.column_config.LinkColumn(
+        "url": st.column_config.LinkColumn(
             "title",
             help="Click to open job",
             display_text="title",
-            url="url"   # 👈 THIS is the key part
         ),
         "Link": None  # 👈 hides the raw link column (optional)
     },
