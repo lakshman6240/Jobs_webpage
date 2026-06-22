@@ -36,7 +36,7 @@ df["title"] = df.apply(
 )
 
 st.write(
-    df[*columns].to_html(escape=False, index=False),
+    df[["title", "company", "location", "hrs_ago"]].to_html(escape=False, index=False),
     unsafe_allow_html=True
 )
 
