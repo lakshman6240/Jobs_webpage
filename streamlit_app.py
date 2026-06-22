@@ -15,7 +15,7 @@ cursor = conn.cursor()
 # Run query
 query = """
 SELECT title, company, location, hrs_ago, url
-FROM jobs_table
+FROM main_catalogue.jobs.curated_jobs
 LIMIT 100
 """
 
