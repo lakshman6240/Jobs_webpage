@@ -29,13 +29,17 @@ columns = ["title", "company", "location", "hrs_ago", "url"]
 df = pd.DataFrame(rows, columns=columns)
 
 # Show in Streamlit
+
 st.dataframe(
     df,
     column_config={
-        "Link": st.column_config.LinkColumn(
-            "Apply",
-            display_text="Open Job"
-        )
+        "title": st.column_config.LinkColumn(
+            "title",
+            help="Click to open job",
+            display_text="title",
+            url="Link"   # 👈 THIS is the key part
+        ),
+        "Link": None  # 👈 hides the raw link column (optional)
     },
     use_container_width=True
 )
