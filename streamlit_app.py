@@ -37,7 +37,7 @@ st.dataframe(
             "title",
             help="Click to open job",
             display_text="title",
-            url="Link"   # 👈 THIS is the key part
+            url="url"   # 👈 THIS is the key part
         ),
         "Link": None  # 👈 hides the raw link column (optional)
     },
